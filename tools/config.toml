@@ -1,0 +1,6 @@
+functions_csv = "data/lcuswitch_functions.csv"
+build_target = "lcuswitch"
+
+[decomp_me]
+compiler_name = "clang-3.9.1"
+default_compile_flags = "-x c++ -O3 -g -std=c++1z -fno-exceptions -Wall -Wextra -Wdeprecated -Wno-unused-parameter -Wno-unused-private-field -fno-strict-aliasing -Wno-invalid-offsetof -D SWITCH -D NNSDK -D MATCHING_HACK_NX_CLANG --target=aarch64-linux-elf -DNON_MATCHING -DVER_100 -fcolor-diagnostics  -mcpu=cortex-a57+fp+simd+crypto+crc -mno-implicit-float -stdlib=libc++ -fPIC -fstandalone-debug -fcolor-diagnostics -Wno-unused-command-line-argument"
