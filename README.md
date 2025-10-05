@@ -17,6 +17,7 @@ the code, decompile functions, improve non-matching functions.
 - update BUILDING.md 
 - add GitHub actions for linting and building
 - fix lint.py
+- Create Discord server(?)
 
 ## Why Nintendo Switch Edition?
 The Nintendo Switch Edition has symbols, making it a good base for decompilation. The Wii U Edition doesn't have symbols, but the compiler toolchain GHS is abysmal. The chance that we find a matching compiler version is next to none, so our assembly wouldn't be matching either way.
