@@ -7,12 +7,13 @@ This project requires a `main` dumped from the latest *Lego City Undercover - EU
 # How to help
 
 If you want to help with the decompilation, then you can do either the todos below, check for possible todo comments in
-the code, decompile functions, improve non-matching functions.
+the code, decompile functions/classes or improve readability of functions or fix non-matching functions.
 
 # Todo
 - improve README.md
 - update BUILDING.md and CONTRIBUTING.md
-- figure out exact compiler version (probably clang ~3.9.1)
+- figure out exact compiler version (probably ~3.8.x or 3.7.x)
+    - add compiler version to decomp.me
 - update setup.py and toolchain for the correct compiler version
 - update BUILDING.md 
 - add GitHub actions for linting and building
