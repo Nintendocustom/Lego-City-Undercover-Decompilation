@@ -14,14 +14,19 @@ the code, decompile functions/classes or improve readability of functions or fix
 - update BUILDING.md and CONTRIBUTING.md
 - figure out exact compiler version (probably ~3.8.x or 3.7.x)
     - add compiler version to decomp.me
-- update setup.py and toolchain for the correct compiler version
+  - update setup.py and toolchain for the correct compiler version
 - update BUILDING.md 
 - add GitHub actions for linting and building
 - fix lint.py
 - Create Discord server(?)
+- create a structure for the project based on the symbols
+- Code style guidelines
 
 ## Why Nintendo Switch Edition?
-The Nintendo Switch Edition has symbols, making it a good base for decompilation. The Wii U Edition doesn't have symbols, but the compiler toolchain GHS is abysmal. The chance that we find a matching compiler version is next to none, so our assembly wouldn't be matching either way.
+
+The Nintendo Switch Edition has symbols, making it a good base for decompilation. The Wii U Edition doesn't have symbols
+and the compiler toolchain GHS is abysmal. The chance that we find a matching compiler version is next to none, so our
+assembly wouldn't be matching either way.
 
 The Nintendo Switch Edition on the other hand was compiled with Clang where it's easier to find the compiler version just by the release date of the game. 
 
