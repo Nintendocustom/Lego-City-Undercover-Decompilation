@@ -20,7 +20,7 @@ private:
     float m_elapsedTime;
     float m_duration;
     float m_progress;
-    bool  m_isPaused;
-    bool  m_isRunning;
-    char  m_padding[2];
+    bool m_isPaused;
+    bool m_isRunning;
+    char m_padding[2];
 };

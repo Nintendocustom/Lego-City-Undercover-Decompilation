@@ -1,4 +1,4 @@
-#include "text.h"
+#include "legogame/text.h"
 
 int Text_SetLanguage_Game(int language_id) {
     return language_id;
