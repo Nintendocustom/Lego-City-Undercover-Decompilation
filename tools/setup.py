@@ -29,8 +29,8 @@ LIBCXX_SRC_URL = "https://releases.llvm.org/3.9.1/libcxx-3.9.1.src.tar.xz"
 
 
 def prepare_executable(original_nso: Optional[Path]):
-    COMPRESSED_HASH = "cf65ba2016505d83b9a0622704521651566b87510e60ebe0d4413546f2ea59c1"
-    UNCOMPRESSED_HASH = "e9cdda9d68e30ce797c6cdf32a71ef8fe1eab269e4280a21cd5acd27611d70c8"
+    COMPRESSED_HASH = "221f5792159ac434a209c47772572a22d641f531fd8c10f5066f346a7f8baadb"
+    UNCOMPRESSED_HASH = "19de17d8897d0660d5639a7a2d9d5a82eae10bacedf0265780a086f91f66defb"
 
     target_hash = file_sha256(original_nso)
 
