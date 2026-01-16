@@ -35,7 +35,7 @@ jobs:
           PYTHONPATH="${PYTHONPATH}:${{ github.workspace }}/tools" python .github/scripts/gen_report.py -o report.json
 
       - name: Upload report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.version }}_report
           path: report.json
