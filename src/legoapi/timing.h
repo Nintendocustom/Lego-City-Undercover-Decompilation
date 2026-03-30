@@ -5,5 +5,5 @@ struct GameFramework {
     float frameTime;
 };
 
-extern GameFramework *theGameFramework;
+extern GameFramework* theGameFramework;
 extern float OVERRIDEFPS;
