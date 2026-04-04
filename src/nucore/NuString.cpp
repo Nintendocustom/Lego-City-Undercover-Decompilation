@@ -11,3 +11,12 @@ int NuStrCpy(char* dst, const char* src) {
     *d = 0;
     return (int)(d - dst);
 }
+
+char *NuStrChr(char *str, char c) {
+    while (*str != '\0') {
+        if (*str == c)
+            return str;
+        str++;
+    }
+    return 0;
+}
