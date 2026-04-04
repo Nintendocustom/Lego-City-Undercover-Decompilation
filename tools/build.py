@@ -5,6 +5,7 @@
 import argparse
 import os
 import subprocess
+import sys
 
 from common import setup_common as setup
 from setup import get_build_dir
@@ -59,8 +60,10 @@ def main():
 
         if paths != real_source_paths:
             touch_cmake_lists()
-
-    subprocess.run(cmake_args)
+    try:
+        subprocess.run(cmake_args, check=True)
+    except subprocess.CalledProcessError as e:
+        sys.exit(e.returncode)
 
 
 if __name__ == "__main__":

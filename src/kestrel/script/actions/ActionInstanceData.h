@@ -111,7 +111,7 @@ struct SCmdParams {
 class ActionInstanceData {
 public:
     int m_Signature;
-    int m_HasInput;
+    int m_InputVariant;
 
     ActionInstanceData();
     virtual ~ActionInstanceData();
