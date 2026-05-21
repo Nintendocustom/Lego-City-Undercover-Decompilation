@@ -2,18 +2,16 @@
 
 class GizmoPickup;
 class CityPDA_ScannerHudInterface;
-class NuConstStringManager
-{
+class NuConstStringManager {
 public:
     static void Free(NuConstStringManager* mgr, const char* str);
 };
 
 namespace NuCore {
-    NuConstStringManager* GetConstStringManager();
+NuConstStringManager* GetConstStringManager();
 }
 
-struct Tint
-{
+struct Tint {
     unsigned char r;
     unsigned char g;
     unsigned char b;
@@ -21,8 +19,9 @@ struct Tint
 };
 
 class ScannableCollectableType {
-    public:
-    ScannableCollectableType(int param1, int param2, const char* iconName, const char* infoText, const char* instanceText);
+public:
+    ScannableCollectableType(int param1, int param2, const char* iconName, const char* infoText,
+                             const char* instanceText);
 
     virtual ~ScannableCollectableType();
 
@@ -35,7 +34,7 @@ class ScannableCollectableType {
     const char* GetInfoText(GizmoPickup* pickup) const;
     const char* GetInstanceText(GizmoPickup* pickup, bool& flag) const;
 
-    private:
+private:
     unsigned char padding[0x12];
     int m_iconId;
     const char* m_iconName;

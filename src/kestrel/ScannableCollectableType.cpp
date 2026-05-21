@@ -18,20 +18,16 @@ const Tint* ScannableCollectableType::GetTint() const {
 
 void ScannableCollectableType::SetIconTint(const char* param1) {
     const char* local = param1;
-    if(local != nullptr) {
-        m_tint.r = (unsigned char)ReadNextNumber(&local, 0xff);
-        m_tint.g = (unsigned char)ReadNextNumber(&local, 0xff);
-        m_tint.b = (unsigned char)ReadNextNumber(&local, 0xff);
+    if (local != nullptr) {
+        m_tint.r = static_cast<unsigned char>(ReadNextNumber(&local, 0xff));
+        m_tint.g = static_cast<unsigned char>(ReadNextNumber(&local, 0xff));
+        m_tint.b = static_cast<unsigned char>(ReadNextNumber(&local, 0xff));
     }
 }
 
-void ScannableCollectableType::ShowFocusHud(CityPDA_ScannerHudInterface& param1) {
-    return;
-}
+void ScannableCollectableType::ShowFocusHud(CityPDA_ScannerHudInterface& param1) {}
 
-void ScannableCollectableType::HideFocusHud(CityPDA_ScannerHudInterface& param1) {
-    return;
-}
+void ScannableCollectableType::HideFocusHud(CityPDA_ScannerHudInterface& param1) {}
 
 const char* ScannableCollectableType::GetInfoText(GizmoPickup* pickup) const {
     return m_infoText;
@@ -42,30 +38,25 @@ const char* ScannableCollectableType::GetInstanceText(GizmoPickup* pickup, bool&
     return m_instanceText;
 }
 
-ScannableCollectableType::~ScannableCollectableType()
-{
+ScannableCollectableType::~ScannableCollectableType() {
     const char* str;
 
     str = m_iconName;
-    if (str != nullptr)
-    {
+    if (str != nullptr) {
         NuConstStringManager* mgr = NuCore::GetConstStringManager();
         NuConstStringManager::Free(mgr, str);
     }
 
     str = m_infoText;
-    if (str != nullptr)
-    {
+    if (str != nullptr) {
         NuConstStringManager* mgr = NuCore::GetConstStringManager();
         NuConstStringManager::Free(mgr, str);
     }
 
     str = m_instanceText;
-    if (str != nullptr)
-    {
+    if (str != nullptr) {
         NuConstStringManager* mgr = NuCore::GetConstStringManager();
         NuConstStringManager::Free(mgr, str);
     }
-
     // Todo add memoryManager
 }
