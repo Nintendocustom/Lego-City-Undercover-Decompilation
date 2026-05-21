@@ -8,6 +8,10 @@ public:
     static void Free(NuConstStringManager* mgr, const char* str);
 };
 
+namespace NuCore {
+    NuConstStringManager* GetConstStringManager();
+}
+
 struct Tint
 {
     unsigned char r;

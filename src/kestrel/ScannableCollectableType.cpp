@@ -1,10 +1,6 @@
 #include "ScannableCollectableType.h"
 #include <cstdio>
 
-namespace NuCore {
-    NuConstStringManager* GetConstStringManager();
-}
-
 int ReadNextNumber(const char** str, int max);
 
 bool ScannableCollectableType::Get2DIconTextureName(char* outBuffer, int param1, int param2) const {
