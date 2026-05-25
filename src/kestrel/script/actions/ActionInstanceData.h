@@ -4,7 +4,7 @@
 
 class NuConstStringManager {
 public:
-    static void Free(NuConstStringManager* mgr, char* str);
+    void Free(const char* str);
 };
 namespace NuCore {
 NuConstStringManager* GetConstStringManager();
@@ -88,15 +88,12 @@ struct SCmdParams {
         entry->m_Type = type;
         entry->m_Flag14 = 0;
 
-        uint64_t* dataPtr = &entry->m_Data.m_Value64;
-
         if (entry->m_IsAllocated) {
             char* strPtr = entry->m_Data.m_String;
-            NuConstStringManager::Free(NuCore::GetConstStringManager(), strPtr);
+            NuCore::GetConstStringManager()->Free(strPtr);
             entry->m_IsAllocated = 0;
         }
 
-        *dataPtr = 0;
         entry->m_Data.m_String = const_cast<char*>(str);
 
         m_CurrentParamIndex++;

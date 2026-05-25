@@ -4,7 +4,7 @@ class GizmoPickup;
 class CityPDA_ScannerHudInterface;
 class NuConstStringManager {
 public:
-    static void Free(NuConstStringManager* mgr, const char* str);
+    void Free(const char* str);
 };
 
 namespace NuCore {

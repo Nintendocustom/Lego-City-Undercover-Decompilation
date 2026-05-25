@@ -1,7 +1,7 @@
 #pragma once
 
 struct NuThreadCreateParameters;
-char* NuStrNCpy(char* dest, const char* src, int count);
+char* NuStrNCpy(char* dest, const char* src, long count);
 
 enum NUTHREADPRIORITY { LOWEST = 0, LOW = 1, NORMAL = 2, HIGH = 3, HIGHEST = 4 };
 

@@ -1,7 +1,7 @@
 #include "ScannableCollectableType.h"
 #include <cstdio>
 
-int ReadNextNumber(const char** str, int max);
+int ReadNextNumber(const char*& str, int max);
 
 bool ScannableCollectableType::Get2DIconTextureName(char* outBuffer, int param1, int param2) const {
     sprintf(outBuffer, "stuff\\icons\\%s.TEX", m_iconName);
@@ -19,9 +19,9 @@ const Tint* ScannableCollectableType::GetTint() const {
 void ScannableCollectableType::SetIconTint(const char* param1) {
     const char* local = param1;
     if (local != nullptr) {
-        m_tint.r = static_cast<unsigned char>(ReadNextNumber(&local, 0xff));
-        m_tint.g = static_cast<unsigned char>(ReadNextNumber(&local, 0xff));
-        m_tint.b = static_cast<unsigned char>(ReadNextNumber(&local, 0xff));
+        m_tint.r = static_cast<unsigned char>(ReadNextNumber(local, 0xff));
+        m_tint.g = static_cast<unsigned char>(ReadNextNumber(local, 0xff));
+        m_tint.b = static_cast<unsigned char>(ReadNextNumber(local, 0xff));
     }
 }
 
@@ -43,20 +43,17 @@ ScannableCollectableType::~ScannableCollectableType() {
 
     str = m_iconName;
     if (str != nullptr) {
-        NuConstStringManager* mgr = NuCore::GetConstStringManager();
-        NuConstStringManager::Free(mgr, str);
+        NuCore::GetConstStringManager()->Free(str);
     }
 
     str = m_infoText;
     if (str != nullptr) {
-        NuConstStringManager* mgr = NuCore::GetConstStringManager();
-        NuConstStringManager::Free(mgr, str);
+        NuCore::GetConstStringManager()->Free(str);
     }
 
     str = m_instanceText;
     if (str != nullptr) {
-        NuConstStringManager* mgr = NuCore::GetConstStringManager();
-        NuConstStringManager::Free(mgr, str);
+        NuCore::GetConstStringManager()->Free(str);
     }
     // Todo add memoryManager
 }

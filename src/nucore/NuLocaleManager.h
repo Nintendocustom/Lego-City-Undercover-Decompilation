@@ -1,7 +1,7 @@
 #pragma once
 
 int NuStrICmp(const char* a, const char* b);
-class nucore {
+class NuCore {
 public:
     void static* GetApplicationState();
 };
