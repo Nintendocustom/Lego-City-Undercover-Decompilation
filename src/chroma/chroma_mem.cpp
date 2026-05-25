@@ -1,8 +1,10 @@
 #include "chroma/chroma_mem.h"
 #include "nn/types.h"
 
-void* malloc(size_t __size);
-void free(void* __ptr);
+extern "C" {
+void* malloc(size_t size);
+void free(void* ptr);
+}
 
 void* Chroma_Alloc(unsigned int size) {
     return malloc(size);
