@@ -1,8 +1,8 @@
 #pragma once
 
-#include "kestrel/script/actions/ActionInstanceData.h"
+#include "kestrel/script/actions/CityPDA_Scanner/CityPDA_CommunicatorScriptAction.h"
 
-class SAction_PDAComm_IsBusy : public ActionInstanceData {
+class SAction_PDAComm_IsBusy : public CityPDA_CommunicatorScriptAction {
 public:
     ~SAction_PDAComm_IsBusy() override;
     const char* GetName() const override;

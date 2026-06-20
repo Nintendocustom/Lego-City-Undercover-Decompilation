@@ -1,6 +1,6 @@
 #pragma once
 
-#include "kestrel/script/actions/ActionInstanceData.h"
+#include "kestrel/script/actions/CityPDA_Scanner/CityPDA_CommunicatorScriptAction.h"
 
 class SAction_PDAComm_CanTakeCall : public ActionInstanceData {
 public:
