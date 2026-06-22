@@ -24,7 +24,7 @@ with open(f"{os.path.dirname(os.path.realpath(__file__))}/cache-version.json") a
 TARGET_PATH = setup.get_target_path()
 TARGET_ELF_PATH = setup.get_target_elf_path()
 CACHE_REPO_RELEASE_URL = f"{cache['urlPrefix']}/{cache['version']}"
-TARGET_UNCOMPRESSED_NSO_PATH = setup.config.get_versioned_data_path(setup.config.get_default_version()) / 'main.uncompressed.nso'
+TARGET_UNCOMPRESSED_NSO_PATH = setup.get_uncompressed_target_path()
 LIBCXX_SRC_URL = "https://releases.llvm.org/3.9.1/libcxx-3.9.1.src.tar.xz"
 
 
@@ -57,15 +57,9 @@ def prepare_executable(original_nso: Optional[Path]):
 
     setup._convert_nso_to_elf(original_nso)
 
-    converted_elf_path = original_nso.with_suffix(".elf")
-
-    if not converted_elf_path.is_file():
+    if not TARGET_ELF_PATH.is_file():
         setup.fail("internal error while preparing executable (missing ELF); please report")
 
-    shutil.move(converted_elf_path, TARGET_ELF_PATH)
-
-    uncompressed_nso_path = original_nso.with_suffix(".uncompressed.nso")
-    shutil.move(uncompressed_nso_path, TARGET_UNCOMPRESSED_NSO_PATH)
 
     if not TARGET_UNCOMPRESSED_NSO_PATH.is_file() or file_sha256(TARGET_UNCOMPRESSED_NSO_PATH) != UNCOMPRESSED_HASH:
         setup.fail("Internal error while exporting uncompressed NSO (uncompressed NSO either doesn't exist or has an incorrect hash); please report")
