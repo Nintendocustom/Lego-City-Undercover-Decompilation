@@ -12,6 +12,40 @@ uint64_t geti(void* ptr, int numBytes) {
             | static_cast<uint64_t>(p[3]) << 24)
            & getmasktbl[numBytes];
 }
+
+void _RLE_WriteRep(unsigned char* dest, unsigned int* destOffset, unsigned char markerByte,
+                   unsigned char value, unsigned int count) {
+    unsigned int pos = *destOffset;
+    if (count <= 3) {
+        if (value == markerByte) {
+            unsigned int idx1 = pos + 1;
+            dest[pos] = value;
+            char lenByte = count + 0xff;
+            dest[idx1] = lenByte;
+            *destOffset = pos + 2;
+            return;
+        }
+        for (int k = 0; k < count; k++) {
+            dest[pos++] = value;
+        }
+        *destOffset = pos;
+        return;
+    }
+
+    unsigned int idx = pos + 1;
+    unsigned int len = count - 1;
+    dest[pos] = markerByte;
+    if (len > 0x7f) {
+        dest[idx] = (len >> 8) | 0x80;
+        idx = pos + 2;
+    }
+    unsigned int idx1 = idx + 1;
+    pos = idx + 2;
+    dest[idx] = len;
+    dest[idx1] = value;
+    *destOffset = pos;
+}
+
 void _RLE_WriteNonRep(unsigned char* dest, unsigned int* outPos, unsigned char escapedByte,
                       unsigned char value) {
     unsigned int pos = *outPos;
@@ -24,6 +58,7 @@ void _RLE_WriteNonRep(unsigned char* dest, unsigned int* outPos, unsigned char e
     }
     *outPos = ++pos;
 }
+
 unsigned int RLE_Decode(unsigned char* src, unsigned char* dst, unsigned int srcSize) {
     unsigned char marker = src[0];
     unsigned int dstOffset = 0;
