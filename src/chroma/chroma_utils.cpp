@@ -59,6 +59,88 @@ void _RLE_WriteNonRep(unsigned char* dest, unsigned int* outPos, unsigned char e
     *outPos = ++pos;
 }
 
+unsigned int RLE_Encode(unsigned char* src, unsigned char* dest, unsigned int srcSize) {
+    unsigned int histogram[256] = {};
+
+    for (int i = 0; i < srcSize; i++) {
+        histogram[src[i]]++;
+    }
+
+    int marker = 0;
+    for (int i = 1; i < 256; i++) {
+        if (histogram[i] < histogram[marker & 0xff]) {
+            marker = i;
+        }
+    }
+    char markerByte = static_cast<char>(marker);
+
+    dest[0] = markerByte;
+    int current = src[0];
+    unsigned int outPos = 1;
+    bool hasPending = true;
+
+    if (srcSize > 1) {
+        unsigned char* srcPtr = src + 1;
+        unsigned int nextIdx = 2;
+
+        goto loop_start;
+        do {
+            srcPtr = src + nextIdx;
+            nextIdx++;
+        loop_start:
+            unsigned char next = *srcPtr;
+            auto curByte = static_cast<unsigned char>(current);
+
+            if (curByte != next) {
+                _RLE_WriteNonRep(dest, &outPos, markerByte, current);
+                current = next;
+                hasPending = true;
+            } else {
+                int runLen = 2;
+                int matchVal = current;
+
+                if (nextIdx >= srcSize) {
+                    hasPending = false;
+                } else {
+                    long j = 0;
+                    while (true) {
+                        if (curByte != static_cast<unsigned char>(matchVal)
+                            || (static_cast<unsigned int>(j) + 2) >> 15 != 0) {
+                            hasPending = true;
+                            break;
+                        }
+                        matchVal = src[nextIdx + j];
+                        j++;
+                        if (nextIdx + j >= srcSize) {
+                            hasPending = false;
+                            break;
+                        }
+                    }
+                    nextIdx += j;
+                    runLen = j + 2;
+                }
+
+                if (curByte == static_cast<unsigned char>(matchVal)) {
+                    _RLE_WriteRep(dest, &outPos, markerByte, current, runLen);
+                    if (hasPending) {
+                        current = src[nextIdx++];
+                    }
+                } else {
+                    _RLE_WriteRep(dest, &outPos, markerByte, current, runLen - 1);
+                    current = matchVal;
+                    hasPending = true;
+                }
+            }
+        } while (nextIdx < srcSize);
+    }
+
+    if (hasPending) {
+        _RLE_WriteNonRep(dest, &outPos, markerByte, current);
+    }
+
+    return outPos;
+}
+
 unsigned int RLE_Decode(unsigned char* src, unsigned char* dst, unsigned int srcSize) {
     unsigned char marker = src[0];
     unsigned int dstOffset = 0;
