@@ -2,7 +2,8 @@
 
 ## How difficult is it to contribute?
 
-It's actually easy to contribute since there are many small functions to decompile, additionally symbols are available
+It's actually easy to contribute since there are many small functions to decompile (on median a function is 80 bytes),
+additionally symbols are available
 for most functions and classes making it easier to understand what each function does.
 You can also work on existing implementations by improving the readability or accuracy of the code.
 
@@ -14,7 +15,7 @@ most of the time right away, especially for smaller functions.
 
 # How to decompile step by step
 
-1. Make sure to set up the project by following the instructions in [docs/BUILDING.md](docs/BUILDING.md).
+1. Make sure to set up the project by following the instructions in [docs/BUILDING.md](BUILDING.md).
 2. Run `tools/check` to make sure the project is set up correctly.
 3. Pick a function or class to work on.
     * Choose a function you understand or are interested in.
