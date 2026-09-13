@@ -56,8 +56,8 @@ jobs:
         run: |
           cd LegoCityHeaders
           git fetch origin
-          git checkout -B "$HEADER_BRANCH" origin/master
-          git reset --hard origin/master
+          git checkout -B "$HEADER_BRANCH" origin/main
+          git reset --hard origin/main
 
       - name: Copy headers
         run: bash ./.github/scripts/copy-headers.sh
