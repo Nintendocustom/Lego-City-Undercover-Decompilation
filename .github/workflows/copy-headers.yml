@@ -66,3 +66,5 @@ jobs:
 
       - name: Push headers
         run: bash ./.github/scripts/push-headers.sh
+        env:
+          DESTINATION_PATH: ./LegoCityHeaders

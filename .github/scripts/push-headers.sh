@@ -8,8 +8,8 @@ function l { # Log a message to the terminal.
 }
 
 # move to the root the Lego repo
-cd "./Lego-City-Undercover-Headers"
-echo "Open root of Lego-City-Undercover-Headers repo"
+cd "$DESTINATION_PATH"
+l "Moved to root of headers repo at $DESTINATION_PATH"
 
 git add -A .
 git config user.name "$AUTHOR_NAME"
