@@ -1,0 +1,68 @@
+name: Copy headers to separate repo
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  copy_headers:
+    if: github.repository == 'Nintendocustom/Lego-City-Undercover-Decompilation'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Lego-City-Undercover-Decompilation
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Check out Lego-City-Undercover-Decompilation-Headers
+        uses: actions/checkout@v7
+        with:
+          repository: Nintendocustom/Lego-City-Undercover-Headers
+          path: ./LegoCityHeaders
+          token: ${{ secrets.HEADERS_TOKEN }}
+
+      - name: Set branch information
+        run: |
+          echo "HEADER_BRANCH=${GITHUB_REF#refs/heads/}" >> "$GITHUB_ENV"
+
+          if [[ "$COMMIT_AUTHOR_NAME" != "" ]]
+          then
+            echo "AUTHOR_NAME=$COMMIT_AUTHOR_NAME" >> "$GITHUB_ENV"
+          else
+            echo "AUTHOR_NAME=$GITHUB_ACTOR" >> "$GITHUB_ENV"
+          fi
+
+          if [[ "$COMMIT_AUTHOR_MAIL" != "" ]]
+          then
+            echo "AUTHOR_MAIL=$COMMIT_AUTHOR_MAIL" >> "$GITHUB_ENV"
+          else
+            echo "AUTHOR_MAIL=$GITHUB_ACTOR@users.noreply.github.com" >> "$GITHUB_ENV"
+          fi
+
+          {
+            echo 'MESSAGE<<EOF'
+            echo "$COMMIT_MESSAGE"
+            echo EOF
+          } >> "$GITHUB_ENV"
+        env:
+          COMMIT_AUTHOR_NAME: ${{ github.event.head_commit.author.name }}
+          COMMIT_AUTHOR_MAIL: ${{ github.event.head_commit.author.email }}
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+
+      - name: Reset headers repository
+        run: |
+          cd LegoCityHeaders
+          git fetch origin
+          git checkout -B "$HEADER_BRANCH" origin/master
+          git reset --hard origin/master
+
+      - name: Copy headers
+        run: bash ./.github/scripts/copy-headers.sh
+        env:
+          DESTINATION_PATH: ./LegoCityHeaders
+
+      - name: Push headers
+        run: bash ./.github/scripts/push-headers.sh
