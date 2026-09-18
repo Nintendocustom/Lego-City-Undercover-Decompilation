@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   compile_verify:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Check out project
         uses: actions/checkout@v7
