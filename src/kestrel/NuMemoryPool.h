@@ -3,7 +3,7 @@
 
 class NuMemoryPool {
 public:
-    void* PoolBlockAlloc(size_t size);
+    void* _PoolBlockAlloc(size_t size, const char* tag);
     void PoolBlockFree(void* ptr, size_t size);
 };
 
