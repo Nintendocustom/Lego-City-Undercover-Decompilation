@@ -7,7 +7,4 @@ public:
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
     ActionState CharacterExec(ApiCharacter* pChar, ScriptContext& context) override;
-
-private:
-    uint32_t m_InputVariant;
 };
