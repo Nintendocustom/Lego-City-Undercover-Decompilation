@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_FadeIn.h"
 
 const char* CharacterAction_FadeIn::GetName() const {
-    return "CharacterAction_FadeIn";
+    return "Character_FadeIn";
 }
 
 void CharacterAction_FadeIn::GetInputs(SCmdParams& params) const {

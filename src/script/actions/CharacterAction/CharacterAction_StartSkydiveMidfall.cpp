@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_StartSkydiveMidfall.h"
 
 const char* CharacterAction_StartSkydiveMidfall::GetName() const {
-    return "CharacterAction_StartSkydiveMidfall";
+    return "Character_StartSkydiveMidfall";
 }
 
 void CharacterAction_StartSkydiveMidfall::GetInputs(SCmdParams& params) const {

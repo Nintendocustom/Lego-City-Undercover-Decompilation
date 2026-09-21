@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetArrestable.h"
 
 const char* CharacterAction_SetArrestable::GetName() const {
-    return "CharacterAction_SetArrestable";
+    return "Character_SetArrestable";
 }
 
 void CharacterAction_SetArrestable::GetInputs(SCmdParams& params) const {

@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_AllowParkour.h"
 
 const char* CharacterAction_AllowParkour::GetName() const {
-    return "CharacterAction_AllowParkour";
+    return "Character_AllowParkour";
 }
 
 void CharacterAction_AllowParkour::GetInputs(SCmdParams& params) const {

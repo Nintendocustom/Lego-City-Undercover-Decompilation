@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetAlternateChute.h"
 
 const char* CharacterAction_SetAlternateChute::GetName() const {
-    return "CharacterAction_SetAlternateChute";
+    return "Character_SetAlternateChute";
 }
 
 void CharacterAction_SetAlternateChute::GetInputs(SCmdParams& params) const {

@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_InContext.h"
 
 const char* CharacterAction_InContext::GetName() const {
-    return "CharacterAction_InContext";
+    return "InContext";
 }
 
 void CharacterAction_InContext::GetInputs(SCmdParams& params) const {

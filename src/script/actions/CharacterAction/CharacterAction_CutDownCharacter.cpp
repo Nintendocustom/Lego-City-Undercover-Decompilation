@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_CutDownCharacter.h"
 
 const char* CharacterAction_CutDownCharacter::GetName() const {
-    return "CharacterAction_CutDownCharacter";
+    return "Character_CutDownCharacter";
 }
 
 void CharacterAction_CutDownCharacter::GetInputs(SCmdParams& params) const {

@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetHealth.h"
 
 const char* CharacterAction_GetHealth::GetName() const {
-    return "CharacterAction_GetHealth";
+    return "GetHealth";
 }
 
 void CharacterAction_GetHealth::GetInputs(SCmdParams& params) const {

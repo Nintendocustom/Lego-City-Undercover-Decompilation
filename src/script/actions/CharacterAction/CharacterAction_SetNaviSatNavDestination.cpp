@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetNaviSatNavDestination.h"
 
 const char* CharacterAction_SetNaviSatNavDestination::GetName() const {
-    return "CharacterAction_SetNaviSatNavDestination";
+    return "Character_SetNaviSatNavDestination";
 }
 
 void CharacterAction_SetNaviSatNavDestination::GetInputs(SCmdParams& params) const {

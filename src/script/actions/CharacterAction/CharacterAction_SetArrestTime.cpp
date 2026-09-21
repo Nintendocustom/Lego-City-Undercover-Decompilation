@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetArrestTime.h"
 
 const char* CharacterAction_SetArrestTime::GetName() const {
-    return "CharacterAction_SetArrestTime";
+    return "SetArrestTime";
 }
 
 void CharacterAction_SetArrestTime::GetInputs(SCmdParams& params) const {

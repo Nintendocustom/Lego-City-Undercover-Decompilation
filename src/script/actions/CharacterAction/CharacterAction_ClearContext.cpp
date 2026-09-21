@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_ClearContext.h"
 
 const char* CharacterAction_ClearContext::GetName() const {
-    return "CharacterAction_ClearContext";
+    return "Character_ClearContext";
 }
 
 void CharacterAction_ClearContext::GetInputs(SCmdParams& params) const {

@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetAIOverride.h"
 
 const char* CharacterAction_SetAIOverride::GetName() const {
-    return "CharacterAction_SetAIOverride";
+    return "Character_SetAiOverride";
 }
 
 void CharacterAction_SetAIOverride::GetInputs(SCmdParams& params) const {

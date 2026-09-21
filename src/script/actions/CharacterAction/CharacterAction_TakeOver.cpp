@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_TakeOver.h"
 
 const char* CharacterAction_TakeOver::GetName() const {
-    return "CharacterAction_TakeOver";
+    return "Character_TakeOver";
 }
 
 void CharacterAction_TakeOver::GetInputs(SCmdParams& params) const {

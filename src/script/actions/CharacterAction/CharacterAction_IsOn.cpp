@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_IsOn.h"
 
 const char* CharacterAction_IsOn::GetName() const {
-    return "CharacterAction_IsOn";
+    return "Character_IsOn";
 }
 
 void CharacterAction_IsOn::GetInputs(SCmdParams& params) const {

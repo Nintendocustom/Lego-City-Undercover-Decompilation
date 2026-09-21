@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_PlayContextAnimation.h"
 
 const char* CharacterAction_PlayContextAnimation::GetName() const {
-    return "CharacterAction_PlayContextAnimation";
+    return "Character_PlayContextAnimation";
 }
 
 void CharacterAction_PlayContextAnimation::GetInputs(SCmdParams& params) const {

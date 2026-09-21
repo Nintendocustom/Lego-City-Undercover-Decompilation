@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_EmitPickups.h"
 
 const char* CharacterAction_EmitPickups::GetName() const {
-    return "CharacterAction_EmitPickups";
+    return "EmitPickups";
 }
 
 void CharacterAction_EmitPickups::GetInputs(SCmdParams& params) const {

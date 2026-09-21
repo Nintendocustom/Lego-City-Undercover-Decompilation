@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetUnEmbed.h"
 
 const char* CharacterAction_SetUnEmbed::GetName() const {
-    return "CharacterAction_SetUnEmbed";
+    return "SetUnEmbed";
 }
 
 void CharacterAction_SetUnEmbed::GetInputs(SCmdParams& params) const {

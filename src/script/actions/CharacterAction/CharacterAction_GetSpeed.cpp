@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetSpeed.h"
 
 const char* CharacterAction_GetSpeed::GetName() const {
-    return "CharacterAction_GetSpeed";
+    return "Character_GetSpeed";
 }
 
 void CharacterAction_GetSpeed::GetInputs(SCmdParams& params) const {

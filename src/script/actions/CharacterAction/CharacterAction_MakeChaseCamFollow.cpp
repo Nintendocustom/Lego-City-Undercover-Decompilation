@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_MakeChaseCamFollow.h"
 
 const char* CharacterAction_MakeChaseCamFollow::GetName() const {
-    return "CharacterAction_MakeChaseCamFollow";
+    return "Character_MakeChaseCamFollow";
 }
 
 void CharacterAction_MakeChaseCamFollow::GetInputs(SCmdParams& params) const {

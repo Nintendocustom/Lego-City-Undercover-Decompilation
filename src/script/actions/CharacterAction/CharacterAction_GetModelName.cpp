@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetModelName.h"
 
 const char* CharacterAction_GetModelName::GetName() const {
-    return "CharacterAction_GetModelName";
+    return "Character_GetModelName";
 }
 
 void CharacterAction_GetModelName::GetInputs(SCmdParams& params) const {

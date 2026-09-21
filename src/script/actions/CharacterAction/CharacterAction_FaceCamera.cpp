@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_FaceCamera.h"
 
 const char* CharacterAction_FaceCamera::GetName() const {
-    return "CharacterAction_FaceCamera";
+    return "FaceCamera";
 }
 
 void CharacterAction_FaceCamera::GetInputs(SCmdParams& params) const {

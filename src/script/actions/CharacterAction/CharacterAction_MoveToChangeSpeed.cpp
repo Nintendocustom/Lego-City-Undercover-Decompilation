@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_MoveToChangeSpeed.h"
 
 const char* CharacterAction_MoveToChangeSpeed::GetName() const {
-    return "CharacterAction_MoveToChangeSpeed";
+    return "Character_MoveToSetSpeed";
 }
 
 void CharacterAction_MoveToChangeSpeed::GetInputs(SCmdParams& params) const {

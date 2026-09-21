@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_FaceLocator.h"
 
 const char* CharacterAction_FaceLocator::GetName() const {
-    return "CharacterAction_FaceLocator";
+    return "Character_FaceLocator";
 }
 
 void CharacterAction_FaceLocator::GetInputs(SCmdParams& params) const {

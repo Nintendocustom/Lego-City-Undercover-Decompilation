@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_IsOnCoaster.h"
 
 const char* CharacterAction_IsOnCoaster::GetName() const {
-    return "CharacterAction_IsOnCoaster";
+    return "Character_IsOnCoaster";
 }
 
 void CharacterAction_IsOnCoaster::GetInputs(SCmdParams& params) const {

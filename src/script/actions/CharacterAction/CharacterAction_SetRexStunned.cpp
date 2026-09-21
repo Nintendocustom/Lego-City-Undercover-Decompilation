@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetRexStunned.h"
 
 const char* CharacterAction_SetRexStunned::GetName() const {
-    return "CharacterAction_SetRexStunned";
+    return "SetRexStunned";
 }
 
 void CharacterAction_SetRexStunned::GetInputs(SCmdParams& params) const {

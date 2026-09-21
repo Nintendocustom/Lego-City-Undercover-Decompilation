@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_EndSkydive.h"
 
 const char* CharacterAction_EndSkydive::GetName() const {
-    return "CharacterAction_EndSkydive";
+    return "Character_EndSkydive";
 }
 
 void CharacterAction_EndSkydive::GetInputs(SCmdParams& params) const {

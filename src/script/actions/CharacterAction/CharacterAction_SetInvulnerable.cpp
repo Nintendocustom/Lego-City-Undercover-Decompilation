@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetInvulnerable.h"
 
 const char* CharacterAction_SetInvulnerable::GetName() const {
-    return "CharacterAction_SetInvulnerable";
+    return "SetInvulnerable";
 }
 
 void CharacterAction_SetInvulnerable::GetInputs(SCmdParams& params) const {

@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_ResetToOrigin.h"
 
 const char* CharacterAction_ResetToOrigin::GetName() const {
-    return "CharacterAction_ResetToOrigin";
+    return "ResetToOrigin";
 }
 
 void CharacterAction_ResetToOrigin::GetInputs(SCmdParams& params) const {

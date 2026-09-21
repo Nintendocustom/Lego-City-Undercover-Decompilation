@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetVehicle.h"
 
 const char* CharacterAction_SetVehicle::GetName() const {
-    return "CharacterAction_SetVehicle";
+    return "Character_SetVehicle";
 }
 
 void CharacterAction_SetVehicle::GetInputs(SCmdParams& params) const {

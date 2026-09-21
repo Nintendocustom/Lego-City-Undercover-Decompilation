@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetSilverBossHearts.h"
 
 const char* CharacterAction_SetSilverBossHearts::GetName() const {
-    return "CharacterAction_SetSilverBossHearts";
+    return "SetSilverBossHearts";
 }
 
 void CharacterAction_SetSilverBossHearts::GetInputs(SCmdParams& params) const {

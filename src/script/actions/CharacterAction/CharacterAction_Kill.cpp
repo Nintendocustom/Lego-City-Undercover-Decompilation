@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_Kill.h"
 
 const char* CharacterAction_Kill::GetName() const {
-    return "CharacterAction_Kill";
+    return "Kill";
 }
 
 void CharacterAction_Kill::GetInputs(SCmdParams& params) const {

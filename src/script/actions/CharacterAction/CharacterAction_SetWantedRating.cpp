@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetWantedRating.h"
 
 const char* CharacterAction_SetWantedRating::GetName() const {
-    return "CharacterAction_SetWantedRating";
+    return "Character_SetWantedRating";
 }
 
 void CharacterAction_SetWantedRating::GetInputs(SCmdParams& params) const {

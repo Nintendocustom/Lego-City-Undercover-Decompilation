@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetWaypointDriveSpeed.h"
 
 const char* CharacterAction_SetWaypointDriveSpeed::GetName() const {
-    return "CharacterAction_SetWaypointDriveSpeed";
+    return "Character_SetWaypointDriveSpeed";
 }
 
 void CharacterAction_SetWaypointDriveSpeed::GetInputs(SCmdParams& params) const {

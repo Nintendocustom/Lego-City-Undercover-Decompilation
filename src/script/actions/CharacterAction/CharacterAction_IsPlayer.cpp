@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_IsPlayer.h"
 
 const char* CharacterAction_IsPlayer::GetName() const {
-    return "CharacterAction_IsPlayer";
+    return "IsPlayer";
 }
 
 void CharacterAction_IsPlayer::GetInputs(SCmdParams& params) const {

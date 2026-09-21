@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_Distance.h"
 
 const char* CharacterAction_Distance::GetName() const {
-    return "CharacterAction_Distance";
+    return "DistanceTo";
 }
 
 void CharacterAction_Distance::GetInputs(SCmdParams& params) const {

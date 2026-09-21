@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_HasClassAbilities.h"
 
 const char* CharacterAction_HasClassAbilities::GetName() const {
-    return "CharacterAction_HasClassAbilities";
+    return "Character_HasClassAbilities";
 }
 
 void CharacterAction_HasClassAbilities::GetInputs(SCmdParams& params) const {

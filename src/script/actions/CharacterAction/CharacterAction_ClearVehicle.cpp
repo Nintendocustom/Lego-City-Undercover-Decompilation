@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_ClearVehicle.h"
 
 const char* CharacterAction_ClearVehicle::GetName() const {
-    return "CharacterAction_ClearVehicle";
+    return "Character_ClearVehicle";
 }
 
 void CharacterAction_ClearVehicle::GetInputs(SCmdParams& params) const {

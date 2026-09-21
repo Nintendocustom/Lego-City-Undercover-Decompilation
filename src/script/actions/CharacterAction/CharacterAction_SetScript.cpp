@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetScript.h"
 
 const char* CharacterAction_SetScript::GetName() const {
-    return "CharacterAction_SetScript";
+    return "SetScript";
 }
 
 void CharacterAction_SetScript::GetInputs(SCmdParams& params) const {

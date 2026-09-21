@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetIgnoreCamVolumes.h"
 
 const char* CharacterAction_SetIgnoreCamVolumes::GetName() const {
-    return "CharacterAction_SetIgnoreCamVolumes";
+    return "SetIgnoreCamVolumes";
 }
 
 void CharacterAction_SetIgnoreCamVolumes::GetInputs(SCmdParams& params) const {

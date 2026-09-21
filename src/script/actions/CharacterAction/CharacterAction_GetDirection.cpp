@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetDirection.h"
 
 const char* CharacterAction_GetDirection::GetName() const {
-    return "CharacterAction_GetDirection";
+    return "Character_GetDirection";
 }
 
 void CharacterAction_GetDirection::GetInputs(SCmdParams& params) const {

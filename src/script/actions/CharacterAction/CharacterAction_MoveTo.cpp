@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_MoveTo.h"
 
 const char* CharacterAction_MoveTo::GetName() const {
-    return "CharacterAction_MoveTo";
+    return "Character_MoveTo";
 }
 
 void CharacterAction_MoveTo::GetInputs(SCmdParams& params) const {

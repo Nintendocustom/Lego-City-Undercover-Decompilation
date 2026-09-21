@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_Attack.h"
 
 const char* CharacterAction_Attack::GetName() const {
-    return "CharacterAction_Attack";
+    return "Character_Attack";
 }
 
 void CharacterAction_Attack::GetInputs(SCmdParams& params) const {

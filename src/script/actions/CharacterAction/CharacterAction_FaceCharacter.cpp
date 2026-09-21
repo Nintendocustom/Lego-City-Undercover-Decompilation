@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_FaceCharacter.h"
 
 const char* CharacterAction_FaceCharacter::GetName() const {
-    return "CharacterAction_FaceCharacter";
+    return "Character_FaceCharacter";
 }
 
 void CharacterAction_FaceCharacter::GetInputs(SCmdParams& params) const {

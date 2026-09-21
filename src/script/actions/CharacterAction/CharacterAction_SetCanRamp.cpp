@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetCanRamp.h"
 
 const char* CharacterAction_SetCanRamp::GetName() const {
-    return "CharacterAction_SetCanRamp";
+    return "Character_SetCanRamp";
 }
 
 void CharacterAction_SetCanRamp::GetInputs(SCmdParams& params) const {

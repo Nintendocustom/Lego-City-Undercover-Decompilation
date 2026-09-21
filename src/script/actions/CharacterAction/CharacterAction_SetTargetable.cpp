@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetTargetable.h"
 
 const char* CharacterAction_SetTargetable::GetName() const {
-    return "CharacterAction_SetTargetable";
+    return "SetTargetable";
 }
 
 void CharacterAction_SetTargetable::GetInputs(SCmdParams& params) const {

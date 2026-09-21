@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetDriveToBoost.h"
 
 const char* CharacterAction_SetDriveToBoost::GetName() const {
-    return "CharacterAction_SetDriveToBoost";
+    return "Character_SetDriveToBoost";
 }
 
 void CharacterAction_SetDriveToBoost::GetInputs(SCmdParams& params) const {

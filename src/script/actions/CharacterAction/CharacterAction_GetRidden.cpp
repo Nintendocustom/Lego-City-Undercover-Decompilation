@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetRidden.h"
 
 const char* CharacterAction_GetRidden::GetName() const {
-    return "CharacterAction_GetRidden";
+    return "GetRidden";
 }
 
 void CharacterAction_GetRidden::GetInputs(SCmdParams& params) const {

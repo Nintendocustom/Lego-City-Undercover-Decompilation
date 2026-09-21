@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetItemOut.h"
 
 const char* CharacterAction_GetItemOut::GetName() const {
-    return "CharacterAction_GetItemOut";
+    return "Character_GetItemOut";
 }
 
 void CharacterAction_GetItemOut::GetInputs(SCmdParams& params) const {

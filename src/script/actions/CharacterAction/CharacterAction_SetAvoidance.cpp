@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetAvoidance.h"
 
 const char* CharacterAction_SetAvoidance::GetName() const {
-    return "CharacterAction_SetAvoidance";
+    return "SetAvoidance";
 }
 
 void CharacterAction_SetAvoidance::GetInputs(SCmdParams& params) const {

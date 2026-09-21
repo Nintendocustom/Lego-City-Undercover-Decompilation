@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetMoveWithGround.h"
 
 const char* CharacterAction_SetMoveWithGround::GetName() const {
-    return "CharacterAction_SetMoveWithGround";
+    return "SetMoveWithGround";
 }
 
 void CharacterAction_SetMoveWithGround::GetInputs(SCmdParams& params) const {

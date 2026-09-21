@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SkydiveRotateToHeading.h"
 
 const char* CharacterAction_SkydiveRotateToHeading::GetName() const {
-    return "CharacterAction_SkydiveRotateToHeading";
+    return "SkydiveRotateToHeading";
 }
 
 void CharacterAction_SkydiveRotateToHeading::GetInputs(SCmdParams& params) const {

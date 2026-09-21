@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_FollowCharacter.h"
 
 const char* CharacterAction_FollowCharacter::GetName() const {
-    return "CharacterAction_FollowCharacter";
+    return "Character_FollowCharacter";
 }
 
 void CharacterAction_FollowCharacter::GetInputs(SCmdParams& params) const {

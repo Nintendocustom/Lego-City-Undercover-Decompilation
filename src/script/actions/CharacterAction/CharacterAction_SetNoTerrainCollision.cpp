@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetNoTerrainCollision.h"
 
 const char* CharacterAction_SetNoTerrainCollision::GetName() const {
-    return "CharacterAction_SetNoTerrainCollision";
+    return "SetNoTerrainCollision";
 }
 
 void CharacterAction_SetNoTerrainCollision::GetInputs(SCmdParams& params) const {

@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_PutAwayCurrentItem.h"
 
 const char* CharacterAction_PutAwayCurrentItem::GetName() const {
-    return "CharacterAction_PutAwayCurrentItem";
+    return "Character_PutAwayCurrentItem";
 }
 
 void CharacterAction_PutAwayCurrentItem::GetInputs(SCmdParams& params) const {

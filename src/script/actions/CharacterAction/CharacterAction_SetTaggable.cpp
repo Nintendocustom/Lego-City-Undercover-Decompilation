@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetTaggable.h"
 
 const char* CharacterAction_SetTaggable::GetName() const {
-    return "CharacterAction_SetTaggable";
+    return "Character_SetTaggable";
 }
 
 void CharacterAction_SetTaggable::GetInputs(SCmdParams& params) const {

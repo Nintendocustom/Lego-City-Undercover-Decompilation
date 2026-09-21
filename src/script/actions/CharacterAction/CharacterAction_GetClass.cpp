@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_GetClass.h"
 
 const char* CharacterAction_GetClass::GetName() const {
-    return "CharacterAction_GetClass";
+    return "Character_GetClass";
 }
 
 void CharacterAction_GetClass::GetInputs(SCmdParams& params) const {

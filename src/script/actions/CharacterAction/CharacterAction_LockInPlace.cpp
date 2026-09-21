@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_LockInPlace.h"
 
 const char* CharacterAction_LockInPlace::GetName() const {
-    return "CharacterAction_LockInPlace";
+    return "Character_LockInPlace";
 }
 
 void CharacterAction_LockInPlace::GetInputs(SCmdParams& params) const {

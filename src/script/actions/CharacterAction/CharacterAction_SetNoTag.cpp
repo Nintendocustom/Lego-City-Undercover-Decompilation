@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetNoTag.h"
 
 const char* CharacterAction_SetNoTag::GetName() const {
-    return "CharacterAction_SetNoTag";
+    return "SetNoTag";
 }
 
 void CharacterAction_SetNoTag::GetInputs(SCmdParams& params) const {

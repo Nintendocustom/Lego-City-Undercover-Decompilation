@@ -1,7 +1,7 @@
 #include "script/actions/CharacterAction/CharacterAction_SetDriveSpeed.h"
 
 const char* CharacterAction_SetDriveSpeed::GetName() const {
-    return "CharacterAction_SetDriveSpeed";
+    return "Character_SetDriveSpeed";
 }
 
 void CharacterAction_SetDriveSpeed::GetInputs(SCmdParams& params) const {
