@@ -21,6 +21,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           submodules: recursive
+          allow-unsafe-pr-checkout: true
       - name: Check for W-state functions
         run: |
           if awk -F',' 'NR>1 && $2=="W"' data/lcuswitch_functions.csv | grep -q .; then
