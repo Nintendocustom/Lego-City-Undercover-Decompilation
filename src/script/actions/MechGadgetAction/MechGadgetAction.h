@@ -4,7 +4,7 @@
 
 class MechGadgetBaseInstance;
 
-class MechCharacterAction : public SAction {
+class MechGadgetAction : public SAction {
 public:
     ActionState Exec(ScriptContext& context) override;
     virtual ActionState MechGadgetExec(ScriptContext& context, MechGadgetBaseInstance* gadget) = 0;
