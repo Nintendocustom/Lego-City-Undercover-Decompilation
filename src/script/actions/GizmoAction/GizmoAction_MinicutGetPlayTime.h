@@ -1,13 +1,14 @@
 #pragma once
 #include "script/actions/GizmoAction/GizmoAction.h"
+#include <cstdint>
 
 class GizmoAction_MinicutGetPlayTime : public GizmoAction {
 public:
-  const char *GetName() const override;
-  void GetInputs(SCmdParams &params) const override;
-  void GetOutputs(SCmdParams &params) const override;
-  ActionState GizmoExec(ScriptContext &context, Gizmo *pGizmo) override;
+    const char* GetName() const override;
+    void GetInputs(SCmdParams& params) const override;
+    void GetOutputs(SCmdParams& params) const override;
+    ActionState GizmoExec(ScriptContext& context, Gizmo* pGizmo) override;
 
 private:
-  uint32_t m_InputVariant;
+    uint32_t m_InputVariant;
 };
