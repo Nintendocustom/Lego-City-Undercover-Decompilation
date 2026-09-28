@@ -3,11 +3,11 @@
 
 class GizmoAction_SetIcon : public GizmoAction {
 public:
-    const char* GetName() const override;
-    void GetInputs(SCmdParams& params) const override;
-    void GetOutputs(SCmdParams& params) const override;
-    ActionState GizmoExec(ScriptContext& context, Gizmo* pGizmo) override;
-    
+  const char *GetName() const override;
+  void GetInputs(SCmdParams &params) const override;
+  void GetOutputs(SCmdParams &params) const override;
+  ActionState GizmoExec(ScriptContext &context, Gizmo *pGizmo) override;
+
 private:
-    int32_t m_InputVariant;
+  int32_t m_InputVariant;
 };
