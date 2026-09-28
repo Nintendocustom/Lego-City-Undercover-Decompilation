@@ -90,9 +90,9 @@ bool CommonString::operator==(const char* other) const {
 
     int result;
     if (sensitive) {
-        result = NuStrICmp(data, other);
-    } else {
         result = NuStrCmp(data, other);
+    } else {
+        result = NuStrICmp(data, other);
     }
     return result == 0;
 }

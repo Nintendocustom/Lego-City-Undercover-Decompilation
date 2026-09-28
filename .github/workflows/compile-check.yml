@@ -9,18 +9,19 @@ permissions:
 
 jobs:
   compile_verify:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Check out project
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
       - name: Check out branch if in PR
         if: ${{ github.event_name == 'pull_request_target' }}
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           submodules: recursive
+          allow-unsafe-pr-checkout: true
       - name: Check for W-state functions
         run: |
           if awk -F',' 'NR>1 && $2=="W"' data/lcuswitch_functions.csv | grep -q .; then
@@ -34,7 +35,7 @@ jobs:
           sudo apt update && sudo apt install -y python3-pip ninja-build cmake ccache xdelta3 clang libssl-dev python-is-python3 curl
           wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2_amd64.deb && sudo dpkg -i libtinfo5_6.3-2_amd64.deb && rm -f libtinfo5_6.3-2_amd64.deb
       - name: Set up python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: '3.14'
           cache: 'pip'
@@ -42,7 +43,7 @@ jobs:
       - name: Set up python package dependencies
         run: pip install capstone colorama cxxfilt pyelftools watchdog python-Levenshtein toml
       - name: Set up cache for toolchain
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: tools_libs
           path: |

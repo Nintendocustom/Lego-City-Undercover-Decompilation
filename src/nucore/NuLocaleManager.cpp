@@ -83,7 +83,7 @@ static const char* s_englishRegionNames[static_cast<int>(NuRegion::COUNT)]{
 
 // todo some of the code in this file is weird and bad
 NuLocaleManager::NuLocaleManager() : m_languageLocked(false), m_regionLocked(false) {
-    nucore::GetApplicationState();
+    NuCore::GetApplicationState();
 
     m_currentLanguage = NuLanguage::ENGLISH;
     m_currentRegion = NuRegion::INVALID;
