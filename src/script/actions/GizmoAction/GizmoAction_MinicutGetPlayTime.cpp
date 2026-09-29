@@ -1,4 +1,4 @@
-#include "GizmoAction_MinicutGetPlayTime.h"
+#include "script/actions/GizmoAction/GizmoAction_MinicutGetPlayTime.h"
 
 const char* GizmoAction_MinicutGetPlayTime::GetName() const {
     return "MiniCutGetPlayTime";
