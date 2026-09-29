@@ -1,4 +1,4 @@
-#include "GizmoAction_SetIcon.h"
+#include "script/actions/GizmoAction/GizmoAction_SetIcon.h"
 
 const char* GizmoAction_SetIcon::GetName() const {
     return "SetIcon";
