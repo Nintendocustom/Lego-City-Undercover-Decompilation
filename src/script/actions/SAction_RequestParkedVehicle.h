@@ -2,7 +2,7 @@
 
 #include "script/actions/SAction.h"
 
-class SAction_Job_Stop : public SAction {
+class SAction_RequestParkedVehicle : public SAction {
 public:
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
@@ -10,5 +10,5 @@ public:
     ActionState Exec(ScriptContext& context) override;
 
 private:
-    bool m_InputVariant;
+    uint32_t m_InputVariant;
 };
