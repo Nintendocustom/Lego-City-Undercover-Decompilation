@@ -8,4 +8,6 @@ public:
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
     ActionState Exec(ScriptContext& context) override;
+private:
+    bool m_InputVariant;
 };

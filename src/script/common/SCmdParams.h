@@ -34,6 +34,10 @@ struct SCmdParams {
             idx = 0;
         }
 
+        if (type == SV_GLOBAL) {
+            return;
+        }
+
         SCmdParamEntry* entry = &m_Args[idx];
 
         entry->m_Type = type;

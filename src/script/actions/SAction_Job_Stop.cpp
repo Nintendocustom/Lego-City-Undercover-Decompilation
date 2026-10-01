@@ -3,6 +3,9 @@
 const char* SAction_Job_Stop::GetName() const {
     return "Job_Stop";
 }
+void SAction_Job_Stop::GetInputs(SCmdParams& params) const {
+    params.AddParam(m_InputVariant ? SV_GLOBAL : SV_JOB);
+}
 
 void SAction_Job_Stop::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
