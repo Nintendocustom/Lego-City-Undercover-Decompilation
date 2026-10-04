@@ -16,5 +16,6 @@ public:
     void GetOutputs(SCmdParams& params) const override;
     ActionState Exec(ScriptContext& context) override;
 
-    int m_field_0xc;
+private:
+    uint32_t m_InputVariant;
 };
