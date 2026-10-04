@@ -4,7 +4,12 @@
 
 class SAction_UsePedestrians : public SAction {
 public:
-    ~SAction_UsePedestrians() override;
+    void operator delete(void* ptr) {
+        NuMemory* mem = NuMemoryGet();
+        NuMemoryManager* mgr = mem->GetThreadMem();
+        mgr->BlockFree(ptr, 0);
+    }
+    
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
