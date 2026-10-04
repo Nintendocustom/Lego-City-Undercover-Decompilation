@@ -5,7 +5,7 @@ const char* SAction_FadeScreen::GetName() const {
 }
 
 void SAction_FadeScreen::GetInputs(SCmdParams& params) const {
-    switch (this->m_field_0xc) {
+    switch (m_InputVariant) {
     case 0:
         params.SanityCheck();
         params.AddParam(SV_BOOL);
