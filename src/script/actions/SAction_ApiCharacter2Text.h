@@ -1,13 +1,13 @@
 #pragma once
 
-
 #include "script/actions/SAction.h"
-// #include "script/actions/ApiCharacter.h"
 #include "kestrel/NuMemoryPool.h"
 
 class SAction_ApiCharacter2Text : public SAction {
 public:
-    void* operator new(size_t size) { return ScriptMemory::m_Pool->_PoolBlockAlloc(size, "SAction_ApiCharacter2Text"); }
+    void* operator new(size_t size) {
+        return ScriptMemory::m_Pool->_PoolBlockAlloc(size, "SAction_ApiCharacter2Text");
+    }
     void operator delete(void* ptr, size_t size) { ScriptMemory::m_Pool->PoolBlockFree(ptr, size); }
 
     const char* GetName() const override;

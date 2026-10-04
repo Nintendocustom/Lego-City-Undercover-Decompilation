@@ -8,7 +8,7 @@ void SAction_PlayerInsideArea::GetInputs(SCmdParams& params) const {
     params.SanityCheck();
     params.AddParam(SV_AREA);
 
-    if(this->m_field_0xc) {
+    if (this->m_field_0xc) {
         params.SanityCheck();
         params.AddParam(SV_NUMBER);
     }
