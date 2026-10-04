@@ -12,3 +12,5 @@ void SAction_GotoRandomState::GetInputs(SCmdParams& params) const {
 void SAction_GotoRandomState::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
 }
+
+SAction_GotoRandomState::SAction_GotoRandomState() {}

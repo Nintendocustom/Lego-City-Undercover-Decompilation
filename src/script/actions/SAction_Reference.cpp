@@ -13,3 +13,5 @@ void SAction_Reference::GetInputs(SCmdParams& params) const {
 void SAction_Reference::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
 }
+
+SAction_Reference::SAction_Reference() {}

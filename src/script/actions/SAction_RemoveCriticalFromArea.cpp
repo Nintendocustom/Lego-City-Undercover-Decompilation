@@ -5,7 +5,7 @@ const char* SAction_RemoveCriticalFromArea::GetName() const {
 }
 
 void SAction_RemoveCriticalFromArea::GetInputs(SCmdParams& params) const {
-    switch (this->m_field_0xc) {
+    switch (this->m_InputVariant) {
     case 2:
         params.SanityCheck();
         params.AddParam(SV_AREA);

@@ -13,3 +13,5 @@ void SAction_GotoState::GetInputs(SCmdParams& params) const {
 void SAction_GotoState::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
 }
+
+SAction_GotoState::SAction_GotoState() {}

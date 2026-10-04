@@ -12,3 +12,5 @@ void SAction_IsReferenceScript::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
     params.AddParam(SV_BOOL);
 }
+
+SAction_IsReferenceScript::SAction_IsReferenceScript() {}

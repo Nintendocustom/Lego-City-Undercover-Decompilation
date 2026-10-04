@@ -5,7 +5,7 @@ const char* SAction_SetHotSpot::GetName() const {
 }
 
 void SAction_SetHotSpot::GetInputs(SCmdParams& params) const {
-    switch (this->m_field_0xc) {
+    switch (this->m_InputVariant) {
     case 0:
         params.SanityCheck();
         break;
