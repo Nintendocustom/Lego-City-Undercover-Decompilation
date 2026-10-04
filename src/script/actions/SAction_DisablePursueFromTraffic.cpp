@@ -12,7 +12,7 @@ void SAction_DisablePursueFromTraffic::GetInputs(SCmdParams& params) const {
 
     params.SanityCheck();
     params.AddParam(SV_HASH);
-    
+
     if (field == 1) {
         params.SanityCheck();
         params.AddParam(SV_ANY);

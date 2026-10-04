@@ -1,7 +1,7 @@
 #pragma once
 
-#include "script/actions/SAction.h"
 #include "kestrel/NuMemoryPool.h"
+#include "script/actions/SAction.h"
 
 class SAction_ApiCharacter2Text : public SAction {
 public:

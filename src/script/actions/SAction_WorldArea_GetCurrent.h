@@ -1,7 +1,7 @@
 #pragma once
 
-#include "script/actions/SAction.h"
 #include "kestrel/NuMemory.h"
+#include "script/actions/SAction.h"
 
 class SAction_WorldArea_GetCurrent : public SAction {
 public:

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "script/actions/SAction.h"
 #include "kestrel/NuMemory.h"
+#include "script/actions/SAction.h"
 
 class SAction_UnlockSequenceAndAnim : public SAction {
 public:
@@ -10,7 +10,7 @@ public:
         NuMemoryManager* mgr = mem->GetThreadMem();
         mgr->BlockFree(ptr, 0);
     }
-    
+
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
