@@ -5,7 +5,7 @@ const char* SAction_UI_Map_PanToPosition_Queued::GetName() const {
 }
 
 void SAction_UI_Map_PanToPosition_Queued::GetInputs(SCmdParams& params) const {
-    switch (this->m_InputVariant1) {
+    switch (m_InputVariant1) {
     case 0:
         params.SanityCheck();
         params.AddParam(SV_LOCATOR);
@@ -15,7 +15,7 @@ void SAction_UI_Map_PanToPosition_Queued::GetInputs(SCmdParams& params) const {
         params.AddParam(SV_POSITION);
         break;
     }
-    switch (this->m_InputVariant2) {
+    switch (m_InputVariant2) {
     case 0:
         params.SanityCheck();
         params.AddParam(SV_NUMBER);

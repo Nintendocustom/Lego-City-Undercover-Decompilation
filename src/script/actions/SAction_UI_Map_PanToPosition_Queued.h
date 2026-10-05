@@ -8,8 +8,9 @@ public:
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
     ActionState Exec(ScriptContext& context) override;
-    void PerPlayerExec(ScriptContext& context, int unknownInt);
+    void PerPlayerExec(ScriptContext& context, int playerIndex);
 
+private:
     uint8_t m_InputVariant1;
     uint8_t m_InputVariant2;
 };

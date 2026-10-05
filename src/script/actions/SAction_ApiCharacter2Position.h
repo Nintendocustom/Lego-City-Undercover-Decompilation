@@ -1,13 +1,11 @@
 #pragma once
 
-#include "script/actions/SAction.h"
+#include "script/actions/CharacterAction/CharacterAction.h"
 
-class ApiCharacter;
-
-class SAction_ApiCharacter2Position : public SAction {
+class SAction_ApiCharacter2Position : public CharacterAction {
 public:
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
-    ActionState CharacterExec(ApiCharacter*, ScriptContext&);
+    ActionState CharacterExec(ApiCharacter*, ScriptContext&) override;
 };

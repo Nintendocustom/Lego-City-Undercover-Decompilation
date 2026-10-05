@@ -9,5 +9,6 @@ public:
     void GetOutputs(SCmdParams& params) const override;
     ActionState Exec(ScriptContext& context) override;
 
-    int m_InputVariant;
+private:
+    uint32_t m_InputVariant;
 };

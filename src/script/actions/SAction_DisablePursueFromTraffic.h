@@ -13,5 +13,5 @@ public:
     ActionState Exec(ScriptContext& context) override;
 
 private:
-    int m_InputVariant;
+    uint32_t m_InputVariant;
 };

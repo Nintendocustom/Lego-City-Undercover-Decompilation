@@ -1,5 +1,7 @@
 #include "script/actions/SAction_Reference.h"
 
+SAction_Reference::SAction_Reference() {}
+
 const char* SAction_Reference::GetName() const {
     return "Reference";
 }
@@ -13,5 +15,3 @@ void SAction_Reference::GetInputs(SCmdParams& params) const {
 void SAction_Reference::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
 }
-
-SAction_Reference::SAction_Reference() {}
