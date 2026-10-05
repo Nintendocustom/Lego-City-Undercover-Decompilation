@@ -1,5 +1,7 @@
 #include "script/actions/SAction_GotoRandomState.h"
 
+SAction_GotoRandomState::SAction_GotoRandomState() {}
+
 const char* SAction_GotoRandomState::GetName() const {
     return "GotoRandomState";
 }

@@ -1,5 +1,7 @@
 #include "script/actions/SAction_Reference.h"
 
+SAction_Reference::SAction_Reference() {}
+
 const char* SAction_Reference::GetName() const {
     return "Reference";
 }

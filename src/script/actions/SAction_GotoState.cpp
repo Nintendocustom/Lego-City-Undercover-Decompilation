@@ -1,5 +1,7 @@
 #include "script/actions/SAction_GotoState.h"
 
+SAction_GotoState::SAction_GotoState() {}
+
 const char* SAction_GotoState::GetName() const {
     return "GotoState";
 }
