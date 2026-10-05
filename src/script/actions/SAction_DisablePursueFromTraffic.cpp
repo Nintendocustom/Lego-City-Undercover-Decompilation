@@ -8,16 +8,13 @@ const char* SAction_DisablePursueFromTraffic::GetName() const {
 }
 
 void SAction_DisablePursueFromTraffic::GetInputs(SCmdParams& params) const {
-    int InputVariant = this->m_InputVariant;
+    int InputVariant = m_InputVariant;
 
     params.SanityCheck();
     params.AddParam(SV_HASH);
-
-    params.SanityCheck();
     params.AddParam(SV_HASH);
 
     if (InputVariant == 1) {
-        params.SanityCheck();
         params.AddParam(SV_ANY);
     }
 }
