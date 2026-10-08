@@ -2,7 +2,7 @@
 
 #include "script/actions/SAction.h"
 
-class SAction_AtkMngr_AttackManager2Text : public SAction {
+class SAction_AtkMngr_CreateAttackManager : public SAction {
 public:
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
