@@ -8,7 +8,4 @@ public:
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
     ActionState Exec(ScriptContext& context) override;
-
-private:
-    uint8_t m_InputVariant;
 };
