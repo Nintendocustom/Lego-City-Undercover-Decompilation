@@ -10,7 +10,6 @@ void SAction_RequestParkedVehicle::GetInputs(SCmdParams& params) const {
         params.AddParam(SV_HASH);
         params.AddParam(SV_HASH);
         params.AddParam(SV_POSITION);
-
     } else if (m_InputVariant == 1) {
         params.AddParam(SV_WORLD_LEVEL);
         params.AddParam(SV_HASH);
