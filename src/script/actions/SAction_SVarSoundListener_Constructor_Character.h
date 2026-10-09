@@ -1,8 +1,8 @@
 #pragma once
 
-#include "script/actions/SAction_SVarSoundListener_Base.h"
+#include "script/actions/SAction.h"
 
-class SAction_SVarSoundListener_Constructor_Character : public SAction_SVarSoundListener_Base {
+class SAction_SVarSoundListener_Constructor_Character : public SAction {
 public:
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
