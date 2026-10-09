@@ -13,6 +13,6 @@ public:
 protected:
     virtual ActionState DoExec(WeakPtr<cAttackManager>& manager, ScriptContext& context) = 0;
 
-    uint8_t m_Member0xc;
+    uint8_t m_Member0xc = 0;
     uint8_t m_Member0xd;
 };
