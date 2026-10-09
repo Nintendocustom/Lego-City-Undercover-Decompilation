@@ -7,6 +7,5 @@ public:
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
-    ActionState SpeechExec(ScriptContext&, NuSoundListener*) override;
     ActionState SpeechExec(ScriptContext& context, NuSoundListener* soundListener) override;
 };
