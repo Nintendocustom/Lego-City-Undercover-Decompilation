@@ -19,12 +19,24 @@ struct SCmdParamEntry {
 
     ScriptVarType m_Type;
     unsigned char m_Flag14;  // 0x14: Unknown flag
-    unsigned char m_IsAllocated;
+    bool m_IsAllocated;
+
+    SCmdParamEntry() : m_Prev(nullptr), m_Data{nullptr}, m_Type(SV_GLOBAL), m_Flag14(0), m_IsAllocated(0) {}
+    ~SCmdParamEntry() {
+        if (m_IsAllocated) {
+            char* str = m_Data.m_String;
+            NuConstStringManager* mgr = NuCore::GetConstStringManager();
+            mgr->Free(str);
+        }
+    }
 };
 
 struct SCmdParams {
     SCmdParamEntry m_Args[64];  // 0x00 - 0x600: Array of 64 parameter entries
     int m_CurrentParamIndex;    // 0x600: Current index of arguments
+
+    SCmdParams() : m_CurrentParamIndex(-1) {}
+    ~SCmdParams() = default;
 
     void AddParam(ScriptVarType type, const char* str = nullptr) {
         int idx = m_CurrentParamIndex;
