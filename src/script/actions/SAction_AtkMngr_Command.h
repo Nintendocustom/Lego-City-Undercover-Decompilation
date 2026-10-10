@@ -22,4 +22,5 @@ protected:
 
     uint8_t m_Member0xc = 0;
     uint8_t m_Member0xd = 0;
+    bool m_AutoSuspend;
 };
