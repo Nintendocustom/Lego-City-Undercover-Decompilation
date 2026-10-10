@@ -19,6 +19,6 @@ void SAction_AtkMngr_SetTutorialMode::GetOutputs(SCmdParams& params) const {
 
 ActionState SAction_AtkMngr_SetTutorialMode::DoExec(WeakPtr<cAttackManager>& manager,
                                                     ScriptContext& context) {
-    manager->m_TutorialMode = 1;
+    manager.m_ptr->m_TutorialMode = 1;
     return ACTION_FINISHED;
 }
