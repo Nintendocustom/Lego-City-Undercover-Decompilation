@@ -20,6 +20,6 @@ void SAction_AtkMngr_AttackedInCombat::GetOutputs(SCmdParams& params) const {
 
 ActionState SAction_AtkMngr_AttackedInCombat::DoExec(WeakPtr<cAttackManager>& manager,
                                                      ScriptContext& context) {
-    context.SetReturn<SVarBool>(0, manager.m_ptr->m_field_0x6d08);
+    context.SetReturn<SVarBool>(0, manager.m_ptr->m_AttackedInCombat);
     return ACTION_FINISHED;
 }

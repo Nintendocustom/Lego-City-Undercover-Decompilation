@@ -16,3 +16,8 @@ void SAction_AtkMngr_Finish::GetInputs(SCmdParams& params) const {
 void SAction_AtkMngr_Finish::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
 }
+
+ActionState SAction_AtkMngr_Finish::DoExec(WeakPtr<cAttackManager>& manager, ScriptContext& context) {
+    manager.m_ptr->m_Finished = true;
+    return ACTION_FINISHED;
+}

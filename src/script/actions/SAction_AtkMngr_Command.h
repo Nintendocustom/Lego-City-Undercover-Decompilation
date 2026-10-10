@@ -5,10 +5,18 @@
 
 class cAttackManager {
 public:
-    uint8_t m_Padding[0x6d08];
-    bool m_field_0x6d08;
+    void CalcSuspendPositions();
+
+    uint8_t m_Padding[0x3564];
+    bool m_bool_0x3564;
+    uint8_t m_Padding2[0x364f];
+    bool m_bool_0x6bb4;
+    uint8_t m_Padding3[0x13b];
+    int32_t m_AttackersCount;
+    uint8_t m_Unk_0x6cf4[0x14];
+    bool m_AttackedInCombat;
     uint8_t m_field_0x6d09;
-    uint8_t m_field_0x6d0a;
+    bool m_Finished;
     uint8_t m_field_0x6d0b;
     bool m_TutorialMode;
     uint8_t m_field_0x6d0d;

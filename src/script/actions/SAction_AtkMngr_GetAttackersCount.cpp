@@ -17,3 +17,9 @@ void SAction_AtkMngr_GetAttackersCount::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
     params.AddParam(SV_NUMBER);
 }
+
+ActionState SAction_AtkMngr_GetAttackersCount::DoExec(WeakPtr<cAttackManager>& manager,
+                                                      ScriptContext& context) {
+    context.SetReturn<SVarFloat>(0, static_cast<float>(manager.m_ptr->m_AttackersCount));
+    return ACTION_FINISHED;
+}
