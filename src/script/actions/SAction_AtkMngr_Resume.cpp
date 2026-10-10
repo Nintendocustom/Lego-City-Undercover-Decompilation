@@ -20,6 +20,6 @@ void SAction_AtkMngr_Resume::GetOutputs(SCmdParams& params) const {
 ActionState SAction_AtkMngr_Resume::DoExec(WeakPtr<cAttackManager>& manager, ScriptContext& context) {
     cAttackManager* mngr = manager.get();
     mngr->m_Suspended = false;
-    mngr->m_field_0x6d10 = 0;
+    mngr->m_AutoSuspended = 0;
     return ACTION_FINISHED;
 }

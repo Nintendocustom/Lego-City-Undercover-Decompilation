@@ -10,7 +10,7 @@ public:
     uint8_t m_field_0x6d0d;
     bool m_Suspended;
     uint8_t m_field_0x6d0f;
-    uint8_t m_field_0x6d10;
+    bool m_AutoSuspended;
 };
 
 class SAction_AtkMngr_Command : public SAction {
