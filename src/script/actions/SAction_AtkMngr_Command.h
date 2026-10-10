@@ -5,7 +5,11 @@
 
 class cAttackManager {
 public:
-    uint8_t m_Padding[0x6d0c];
+    uint8_t m_Padding[0x6d08];
+    bool m_field_0x6d08;
+    uint8_t m_field_0x6d09;
+    uint8_t m_field_0x6d0a;
+    uint8_t m_field_0x6d0b;
     bool m_TutorialMode;
     uint8_t m_field_0x6d0d;
     bool m_Suspended;
