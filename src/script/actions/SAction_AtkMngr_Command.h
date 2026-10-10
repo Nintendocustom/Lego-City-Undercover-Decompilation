@@ -8,7 +8,7 @@ public:
     uint8_t m_Padding[0x6d0c];
     uint8_t m_TutorialMode;
     uint8_t m_field_0x6d0d;
-    uint8_t m_field_0x6d0e;
+    bool m_Suspended;
     uint8_t m_field_0x6d0f;
     uint8_t m_field_0x6d10;
 };
