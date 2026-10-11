@@ -37,7 +37,7 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v7
         with:
-          python-version: '3.14'
+          python-version: '3.15'
           cache: 'pip'
           cache-dependency-path: .github/workflows/compile-check.yml
       - name: Set up python package dependencies
