@@ -1,4 +1,4 @@
-#include "script/actions/SAction_DestroyKrawliesInGroup.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_DestroyKrawliesInGroup.h"
 
 const char* SAction_DestroyKrawliesInGroup::GetName() const {
     return "DestroyKrawliesInGroup";

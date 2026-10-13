@@ -1,4 +1,4 @@
-#include "script/actions/SAction_TriggerKrawliesMassPanic.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_TriggerKrawliesMassPanic.h"
 
 const char* SAction_TriggerKrawliesMassPanic::GetName() const {
     return "TriggerKrawliesMassPanic";

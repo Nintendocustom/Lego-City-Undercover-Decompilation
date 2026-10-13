@@ -1,4 +1,4 @@
-#include "script/actions/SAction_OverrideKrawlieLODDistances.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_OverrideKrawlieLODDistances.h"
 
 const char* SAction_OverrideKrawlieLODDistances::GetName() const {
     return "OverrideKrawlieLODDistances";

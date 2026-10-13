@@ -1,4 +1,4 @@
-#include "script/actions/SAction_PauseKrawlieSpawner.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_PauseKrawlieSpawner.h"
 
 const char* SAction_PauseKrawlieSpawner::GetName() const {
     return "PauseKrawlieSpawner";

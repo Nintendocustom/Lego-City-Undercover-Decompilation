@@ -1,4 +1,4 @@
-#include "script/actions/SAction_SetKrawlieProcessing.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_SetKrawlieProcessing.h"
 
 const char* SAction_SetKrawlieProcessing::GetName() const {
     return "SetKrawlieProcessing";

@@ -1,4 +1,4 @@
-#include "script/actions/SAction_KrawliePartyTime.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_KrawliePartyTime.h"
 
 const char* SAction_KrawliePartyTime::GetName() const {
     return "PumpUpTheKrawlieJam";

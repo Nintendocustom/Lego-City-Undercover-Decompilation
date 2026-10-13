@@ -4,6 +4,7 @@
 
 class SAction_TriggerKrawliesMassPanic : public SAction {
 public:
+    SAction_TriggerKrawliesMassPanic(uint32_t inputVariant) : m_InputVariant(inputVariant) {}
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;

@@ -1,4 +1,4 @@
-#include "script/actions/SAction_PauseKrawlieGroup.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_PauseKrawlieGroup.h"
 
 const char* SAction_PauseKrawlieGroup::GetName() const {
     return "PauseKrawlieGroup";

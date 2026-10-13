@@ -1,4 +1,4 @@
-#include "script/actions/SAction_ConvertKrawlieToCharacter.h"
+#include "script/actions/CityKrawlieScriptActions/SAction_ConvertKrawlieToCharacter.h"
 
 const char* SAction_ConvertKrawlieToCharacter::GetName() const {
     return "ConvertKrawlieToCharacter";
