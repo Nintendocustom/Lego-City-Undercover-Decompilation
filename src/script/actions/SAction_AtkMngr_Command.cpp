@@ -1,0 +1,1 @@
+#include "script/actions/SAction_AtkMngr_Command.h"

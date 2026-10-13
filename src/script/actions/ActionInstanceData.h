@@ -1,8 +1,7 @@
 #pragma once
 #include "kestrel/NuMemory.h"
+#include "script/common/ScriptContext.h"
 #include <cstddef>
-
-struct ScriptContext;
 
 class ActionInstanceData {
 public:
