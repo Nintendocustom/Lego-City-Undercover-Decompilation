@@ -11,5 +11,3 @@ void SCmdYield::GetInputs(SCmdParams& params) const {
 void SCmdYield::GetOutputs(SCmdParams& params) const {
     params.SanityCheck();
 }
-
-
