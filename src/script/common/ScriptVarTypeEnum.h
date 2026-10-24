@@ -4,9 +4,11 @@
 
 enum ActionState : uint32_t {
     ACTION_FINISHED = 1,
+    ACTION_HOLD = 4,
     ACTION_YIELD = 5,
     ACTION_CONVERT_DEFAULT = 7,
     ACTION_STOP = 8,
+    ACTION_END = 9,
 };
 
 enum ScriptVarType : uint32_t {
