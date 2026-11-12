@@ -6,7 +6,7 @@ bool NuEquiv(float a, float b);
 void NuEquivTollerance(float tolerance);
 unsigned int NVConvertFloatToHalf(int intValue);
 uint16_t NuFloatToHalf(float floatValue);
-int NuPower2(int exponent);
+int NuPower2(int value);
 float NuPow(float base, float exponent);
 float NuLog2(float value);
 void NuLog10(float value);
