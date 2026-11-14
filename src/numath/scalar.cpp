@@ -39,3 +39,7 @@ bool NuEquiv(float a, float b) {
     float difference = a - b;
     return (difference >= 0.0f ? difference : -difference) < NuEquivTollerance_v;
 }
+
+void NuEquivTollerance(float tolerance) {
+    NuEquivTollerance_v = tolerance;
+}
