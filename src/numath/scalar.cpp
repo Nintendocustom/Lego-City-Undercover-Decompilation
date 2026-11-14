@@ -30,3 +30,7 @@ float NuLog2(float value) {
     result = logf(value);
     return result * 1.4426954f;
 }
+
+float NuLog10(float value) {
+    return log10f(value);
+}
