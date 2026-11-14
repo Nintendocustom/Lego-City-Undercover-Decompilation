@@ -87,3 +87,16 @@ int NuMiscNextPow2Exp(int value) {
 
     return step;
 }
+
+float NuPowFast(float base, float exponent) {
+    float result;
+
+    if (base == 0) {
+        return 0.0;
+    }
+
+    result = logf(base);
+    result = expf(result * exponent);
+
+    return result;
+}

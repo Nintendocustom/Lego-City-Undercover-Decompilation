@@ -10,6 +10,7 @@ unsigned int NVConvertFloatToHalf(int intValue);
 uint16_t NuFloatToHalf(float floatValue);
 int NuPower2(int value);
 float NuPow(float base, float exponent);
+float NuPowFast(float base, float exponent);
 float NuLog2(float value);
 float NuLog10(float value);
 float NuExp10(float value);
