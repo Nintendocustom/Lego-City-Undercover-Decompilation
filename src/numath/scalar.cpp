@@ -71,3 +71,7 @@ unsigned int NuMiscPow2Exp(int value) {
 
     return 0;
 }
+
+float NuFsign(float value) {
+    return (value >= 0.0) ? 1.0f : -1.0f;
+}
