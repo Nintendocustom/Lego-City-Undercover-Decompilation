@@ -34,3 +34,8 @@ float NuLog2(float value) {
 float NuLog10(float value) {
     return log10f(value);
 }
+
+bool NuEquiv(float a, float b) {
+    float difference = a - b;
+    return (difference >= 0.0f ? difference : -difference) < NuEquivTollerance_v;
+}

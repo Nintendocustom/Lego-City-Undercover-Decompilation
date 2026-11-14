@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdint>
 
+static float NuEquivTollerance_v = 0.01;
+
 float NuFsign(float value);
 bool NuEquiv(float a, float b);
 void NuEquivTollerance(float tolerance);
