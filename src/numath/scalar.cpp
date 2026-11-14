@@ -43,3 +43,16 @@ bool NuEquiv(float a, float b) {
 void NuEquivTollerance(float tolerance) {
     NuEquivTollerance_v = tolerance;
 }
+
+int NuMiscNextPow2(int value) {
+    int result;
+    unsigned int step = 0;
+
+    do {
+        result = 1 << step;
+        step++;
+
+    } while (result < value);
+
+    return result;
+}
