@@ -56,3 +56,18 @@ int NuMiscNextPow2(int value) {
 
     return result;
 }
+
+unsigned int NuMiscPow2Exp(int value) {
+    int step = 0;
+
+    if (value >= 1) {
+        while (value > 1) {
+            value = value >> 1;
+            step++;
+        }
+
+        return step;
+    }
+
+    return 0;
+}
