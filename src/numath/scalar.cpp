@@ -24,3 +24,9 @@ float NuPow(float base, float exponent) {
 
     return result;
 }
+
+float NuLog2(float value) {
+    float result;
+    result = logf(value);
+    return result * 1.4426954f;
+}
