@@ -75,3 +75,15 @@ unsigned int NuMiscPow2Exp(int value) {
 float NuFsign(float value) {
     return (value >= 0.0) ? 1.0f : -1.0f;
 }
+
+int NuMiscNextPow2Exp(int value) {
+    int step = -1;
+    int result = 0;
+
+    do {
+        step++;
+        result = 1 << step;
+    } while (result < value);
+
+    return step;
+}
