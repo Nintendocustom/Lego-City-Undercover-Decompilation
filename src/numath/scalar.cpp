@@ -99,7 +99,7 @@ float NuCubicInterpolation(float p0, float p1, float p2, float p3, float t) {
     return (temp1 * t_cub) + (temp2 * t_sq) + (temp3 * t) + p1;
 }
 
-float NuHermiteInterpolation(float y0, float y1, float y2, float y3, float t){
+float NuHermiteInterpolation(float y0, float y1, float y2, float y3, float t) {
     float slope1 = (y2 - y0) * 0.5f;
     float slope2 = (y3 - y1) * 0.5f;
     float t_sq = t * t;
