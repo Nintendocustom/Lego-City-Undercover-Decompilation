@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdint>
 
+static float NuEquivTollerance_v = 0.01;
+
 float NuFsign(float value);
 bool NuEquiv(float a, float b);
 void NuEquivTollerance(float tolerance);
@@ -8,8 +10,9 @@ unsigned int NVConvertFloatToHalf(int intValue);
 uint16_t NuFloatToHalf(float floatValue);
 int NuPower2(int value);
 float NuPow(float base, float exponent);
+float NuPowFast(float base, float exponent);
 float NuLog2(float value);
-void NuLog10(float value);
+float NuLog10(float value);
 float NuExp10(float value);
 int NuMiscNextPow2(int value);
 unsigned int NuMiscPow2Exp(int value);
